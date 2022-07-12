@@ -40,7 +40,7 @@ export async function createCardEmployee(req: Request, res: Response) {
     employeeId: ifExistEmployee.id,
     number: faker.finance.creditCardNumber("visa"),
     cardholderName: nameInCardWithFormat.join(" "),
-    securityCode: cryptr.encrypt(cvc),
+    securityCode: cvc,
     expirationDate: cardDateNowdayjs,
     password: "",
     isVirtual: false,
