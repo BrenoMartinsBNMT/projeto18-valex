@@ -1,13 +1,13 @@
 import express, { json } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import routerCreateCard from "./routers/routerCreateCard.js";
+import routerCards from "./src/routers/routerCards.js";
 const app = express();
 dotenv.config();
 
 app.use(cors());
 app.use(json());
-app.use(routerCreateCard);
+app.use(routerCards);
 
 app.get("/", (req, res) => {
   res.send("api funcionado!!!");

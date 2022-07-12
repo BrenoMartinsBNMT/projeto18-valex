@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { ObjectSchema } from "joi";
 
-export function middlewareRegistrationCard(schema: ObjectSchema) {
+export function middlewareCards(schema: ObjectSchema) {
   return async function (req: Request, res: Response, next: NextFunction) {
     const { error } = schema.validate(req.body);
     try {
