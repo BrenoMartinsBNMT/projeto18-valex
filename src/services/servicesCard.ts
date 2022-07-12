@@ -27,7 +27,7 @@ export async function activateCard(req: Request, res: Response) {
     }
 
     update(infosToActivateCard.id, { password: password });
-    console.log(infosToActivateCard);
+    res.status(200).send("card activated!");
   } catch (e) {
     return res.status(404).send(e);
   }

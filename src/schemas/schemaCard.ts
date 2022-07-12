@@ -14,3 +14,7 @@ export const schemaActivateCard = Joi.object({
   cvc: Joi.string().length(3).required(),
   password: Joi.string().length(4).required(),
 });
+
+export const schemaVisualizationBalance = Joi.object({
+  cardId: Joi.string().required(),
+});
